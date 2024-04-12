@@ -46,11 +46,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TaskNotification(painter: Painter, title: String, message: String, modifier: Modifier = Modifier) {
+fun TaskNotification(painter: Painter, title: String, message: String) {
     Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
             painter = painter,
@@ -70,7 +69,7 @@ fun TaskNotification(painter: Painter, title: String, message: String, modifier:
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun TaskNotificationPreview() {
     TaskManagerTheme {
         TaskNotification(
             painterResource(id = R.drawable.ic_task_completed),

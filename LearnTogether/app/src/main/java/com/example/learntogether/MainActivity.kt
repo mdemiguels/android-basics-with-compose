@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -47,10 +46,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Article(painter: Painter, title: String, description: String, content: String, modifier: Modifier = Modifier) {
+fun Article(painter: Painter, title: String, description: String, content: String) {
     Column(
-        verticalArrangement = Arrangement.Top,
-        modifier = modifier
+        verticalArrangement = Arrangement.Top
     ) {
         Image(
             painter = painter,
@@ -82,7 +80,7 @@ fun Article(painter: Painter, title: String, description: String, content: Strin
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview(modifier: Modifier = Modifier) {
+fun ArticlePreview() {
     LearnTogetherTheme {
         Article(
             painterResource(id = R.drawable.bg_compose_background),
