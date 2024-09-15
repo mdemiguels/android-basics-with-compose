@@ -74,4 +74,4 @@ To run any of these apps, follow these steps:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/android-basics-compose.git
+   git clone https://github.com/mdemiguels/android-basics-compose.git
